@@ -1,0 +1,21 @@
+; LINES STARTING WITH ';' ARE COMMENTS
+title       = Minimization  ; 标题
+define          = -DFLEXIBLE   ;使用柔性水模型而非刚性模型, 这样最陡下降法可进一步最小化能量
+; Parameters describing what to do, when to stop and what to save
+; 参数描述如何做，当模拟结束后如何保存
+integrator  = steep     ; Algorithm (steep = steepest descent minimization) 最陡梯度法
+emtol       = 1000.0    ; Stop minimization when the maximum force < 10.0 kJ/mol    当小于多少能量以后停止最小化
+emstep      = 0.01      ; Energy step size  能量步大小
+nsteps      = 50000     ; Maximum number of (minimization) steps to perform  最大最小化步骤
+energygrps  = system    ; Which energy group(s) to write to disk   哪个组进行能量最小化
+; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
+; 参数描述怎样寻找邻近的原子，怎么样计算相互联系
+nstlist         = 1         ; Frequency to update the neighbor list and long range forces 更新近邻列表的频率. 1表示每步都更新
+cutoff-scheme   = Verlet           ; With cutoff-scheme=Verlet and verlet-buffer-tolerance set, nstlist is actually a minimum value and mdrun might increase it, unless it is set to 1 这样设置更加精确（看英文貌似是的）
+ns_type         = grid      ; Method to determine neighbor list (simple, grid)
+rlist           = 1.0       ; Cut-off for making neighbor list (short range forces) 短程力近邻列表的截断值
+coulombtype     = PME       ; Treatment of long range electrostatic interactions 计算长程静电的方法. PME为粒子网格Ewald方法, 还可以使用cut-off
+rcoulomb        = 1.0       ; long range electrostatic cut-off   长程库仑力截断值
+rvdw            = 1.0       ; long range Van der Waals cut-off  范德华距离截断值
+constraints         = none             ;无位置限制
+pbc             = xyz       ; Periodic Boundary Conditions  周期性

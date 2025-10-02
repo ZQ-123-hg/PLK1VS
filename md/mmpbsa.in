@@ -1,0 +1,25 @@
+
+&general
+     sys_name = "", startframe = 1, endframe = 100, interval = 1, verbose = 2, forcefields = "oldff/leaprc.ff99SB",leaprc.gaff", keep_files = 2, netcdf = 0, solvated_trajectory = 1, verbose = 1, gmx_path = "/usr/local/gromacs/avx2_256/bin"
+/
+
+&gb
+     igb = 5, intdiel = 1.0, saltcon=0.150, surften = 0.0072, surfoff =0.0, molsurf = 0, msoffset =0, probe =1.4,  ifqnt = 0, qm_theory = "", qm_residues = "",   qmcharge_com = 0, qmcharge_lig = 0, qmcharge_rec = 0, qmcut = 9999.0
+/
+
+&pb
+      ipb = 2, inp = 2, sander_apbs = 0, indi = 1.0, exdi = 80.0, emem = 4.0, radiopt=1, istrng=0.15, prbrad = 1.4, sasopt = 0, memopt = 0, mthick = 40, mctrdz = 0.0, poretype = 1, solvopt = 1, linit = 1000, fillratio = 4.0, scale = 2.0, nfocus = 2, bcopt = 5, eneopt = 2, frcopt = 0, cutfd = 5.0, cutnb = 0.0, cavity_offset = -0.5692, maxarcdot = 1500
+/
+
+&decomp
+idecomp=2, dec_verbose=3, print_res="within 4"
+/
+
+
+
+## verbose =1，输出能量信息，=0：不输出，=2输出每步能量信息
+
+##idecomp=1 & 2 时输出结果为单个残基的结合自由能，其中=1将1-4非键相互作用能（1-4 EEL & 1-4 VDW）归为内部势能，而=2则将1-4非键相互作用各自归为静电势能和范德华势能上；idecomp=3 & 4 时输出结果为残基对的结合自由能，此处无论是将1-4非键相互作用归为哪类，对最终结果影响不大，主要还是选择要计算的是单个残基还是残基对的结合自由能）
+##dec_verbose=0：输出总体的ΔG；dec_verbose=1：输出侧链、骨架、总体的ΔG；dec_verbose=2：输出配体、受体、复合物的能量值以及总体的ΔG；dec_verbose=3：输出配体、受体、复合物的能量值以及侧链、骨架、总体的ΔG（此处若没有特殊需要，选择0即可）
+##print_res:此部分为要计算能量的残基编号，无论是残基对还是单个残基，都不能只涉及受体，或只涉及配体残基，需要两部分均含盖，我的方法是选择配体周围5A内的残基，这样就两部分残基都包括了。（只有一类残基会报错哦）
+##

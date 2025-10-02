@@ -1,0 +1,29 @@
+[
+ {
+  "receptorAtom": {
+   "chain": "A",
+   "resid": 59,
+   "atomname": "O"
+  },
+  "ligandSubstructSMARTS": "[*]",
+  "distance":3.5
+ },
+ {
+  "receptorAtom": {
+   "chain": "A",
+   "resid": 133,
+   "atomname": "O"
+  },
+  "ligandSubstructSMARTS": "[*]",
+  "distance":3.5
+ },
+ {
+  "receptorAtom": {
+   "chain": "A",
+   "resid": 133,
+   "atomname": "HN"
+  },
+  "ligandSubstructSMARTS": "[*]",
+  "distance":3.5
+ }
+]

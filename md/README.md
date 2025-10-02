@@ -63,12 +63,6 @@ The workflow follows a standard MD simulation protocol with the following stages
 - **Binding Affinity Prediction**: MM/GBSA methodology for quantitative binding assessment
 - **Quality Control**: Multi-stage energy minimization and equilibration protocols
 
-## Requirements
-
-- GROMACS (recommended version 2020 or later)
-- AmberTools (for MM/GBSA calculations)
-- Standard computational chemistry utilities
-
 ## Usage
 
 1. **System Setup**: Ensure all input files are properly prepared
@@ -76,14 +70,6 @@ The workflow follows a standard MD simulation protocol with the following stages
 3. **Analysis**: Evaluate binding free energies from MM/GBSA output
 4. **Results**: Compare ligand binding affinities for lead compound selection
 
-## Output
 
-The workflow generates comprehensive simulation trajectories and binding free energy estimates for each ligand candidate, enabling quantitative comparison of protein-ligand interactions and rational drug design decisions.
 
-## License
 
-[Specify appropriate license]
-
-## Citation
-
-[Add relevant citations for methodologies and software used]

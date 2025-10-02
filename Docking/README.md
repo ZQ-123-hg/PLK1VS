@@ -18,7 +18,7 @@ This repository contains a comprehensive molecular docking and post-processing w
 - **distributed_prepare_ligand.sh**: Enables parallel execution of ligand preparation procedures
 - **distributed_unidock.sh**: Facilitates distributed docking calculations across multiple computing nodes
 
-### Core Filtering System
+### Filtering System
 - **liggrep_multi-threaded.py**: Multi-threaded filtering engine that processes docking results
 - **liggrep_filters_PLK1.json**: Interaction criteria specification file for PLK1-specific binding analysis
 
@@ -29,21 +29,3 @@ This repository contains a comprehensive molecular docking and post-processing w
 3. **Results Filtering**: Systematic identification and selection of docking poses based on predefined interaction criteria
 4. **Contact Analysis**: Evaluation of specific contacts with key binding site amino acid residues crucial for PLK1 inhibition
 
-## Key Features
-
-- **Parallel Processing**: Distributed computing capabilities for enhanced performance
-- **Multi-threaded Filtering**: Efficient post-processing of large-scale docking results
-- **Specific Target Focus**: Optimized for PLK1 inhibitor identification
-- **Systematic Selection**: Criteria-based pose selection ensuring biologically relevant interactions
-
-## Technical Requirements
-
-- Compatible docking software environment
-- Multi-core processing capabilities for optimal performance
-- Sufficient storage for intermediate and final results
-
-## Usage
-
-The workflow is designed to systematically process molecular docking results and identify compounds with optimal binding characteristics for PLK1 inhibition research.
-
----
